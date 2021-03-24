@@ -1,4 +1,4 @@
-import mongoose, { mongo, Mongoose } from 'mongoose';
+import mongoose from 'mongoose';
 const urlSchema = new mongoose.Schema(
     {
         longUrl: {
@@ -20,4 +20,5 @@ const urlSchema = new mongoose.Schema(
 
 );
 const URL = mongoose.model('URL', urlSchema);
-export default URL;
+
+module.exports = User;

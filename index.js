@@ -3,9 +3,16 @@ const bodyParser = require('body-parser');
 const request = require('request');
 const https = require('https')
 const { json } = require('body-parser');
-
+const mongoose = require('mongoose');
+const URL = require("./models/url.js")
 
 const app = express();
+var mongoDB = 'mongodb://127.0.0.1/my_database';
+mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
+
 app.use(bodyParser.urlencoded({extended: true}));
 
 
