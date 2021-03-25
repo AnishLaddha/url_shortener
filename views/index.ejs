@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/styles.css" rel="stylesheet" type="text/css">
+    <script src="https://use.fontawesome.com/7f2137cb9a.js"></script>
+    <title>URL Shortener</title>
+</head>
+<body>
+    <div class="main-cont">
+        <div class="left">
+            <h1>URL Shortener</h1>
+            <form class="url_inp_form" action="/" method="post">
+                <input type="url" name="user_url" placeholder="Enter URL Here:">
+                <br>
+                <button type="submit">Shorten</button>
+                <button type="reset">Reset</button>
+            </form>
+            <% if(sid === ""){%>
+                <p></p>
+            <% } else{%>
+            <% %>
+                <p>your url: </p>
+                <a href="<%= sid %>"><%= sid %></a>
+            <% } %>
+        </div>
+        <div class="right">
+            <button class="rt_btn" type="submit">API</button>
+            <button class="rt_btn" type="submit">Stats</button>
+            <button class="rt_btn" type="submit">All Links</button>
+            <a href="https://github.com/AnishLaddha/url_shortener" target="_blank"><button class="rt_btn" type="submit"><i class="fa fa-github" aria-hidden="true"></i>&nbspGithub</button></a>
+
+        </div>
+    </div>
+</body>
+</html>
